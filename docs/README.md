@@ -79,7 +79,6 @@ Para ejecutarlas:
 ## 📊 Ejemplo de Resultado
 Búsqueda: **"Lima"**
 
-```txt
 Lugar: Lima, PE
 Temperatura: 24 °C
 Humedad: 55 %
