@@ -1,0 +1,213 @@
+/* ==============================
+   RESET GLOBAL (RECOMENDADO)
+================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   VARIABLES CSS
+================================ */
+:root {
+  /* Colores */
+  --color-bg: linear-gradient(180deg, #e0f2fe, #f8fafc);
+  --color-card: #ffffff;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-text-main: #0f172a;
+  --color-text-secondary: #475569;
+  --color-border: #cbd5e1;
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  --color-disabled: #94a3b8;
+
+  /* Tipografía */
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, sans-serif;
+
+  /* Espaciados */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+
+  /* Sombras */
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==============================
+   BASE
+================================ */
+body {
+  min-height: 100vh;
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  display: flex;
+  justify-content: center;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+================================ */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 1.5rem 1rem 2rem;
+}
+
+/* ==============================
+   TÍTULO
+================================ */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* ==============================
+   TARJETAS
+================================ */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+/* ==============================
+   FORMULARIO
+================================ */
+.form {
+  margin-bottom: 1rem;
+}
+
+.form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-secondary);
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--color-primary-hover);
+}
+
+button:disabled {
+  background: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==============================
+   ESTADOS (MENSAJES)
+================================ */
+.status {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.status.error {
+  color: var(--color-error);
+}
+
+.status.success {
+  color: var(--color-success);
+}
+
+/* ==============================
+   RESULTADO DEL CLIMA
+================================ */
+.result {
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+#place {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+/* Temperatura (protagonista) */
+.temperature {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.unit {
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+
+/* Detalles */
+.details {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* ==============================
+   ANIMACIONES
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   RESPONSIVE (DESKTOP)
+================================ */
+@media (min-width: 640px) {
+  .container {
+    padding-top: 3rem;
+  }
+}

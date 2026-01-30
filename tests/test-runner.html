@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pruebas - Aplicación del Clima</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; }
+    .summary { font-weight: 600; margin-bottom: 12px; }
+    ul.results { list-style: none; padding: 0; }
+    ul.results li { padding: 6px 8px; border-left: 4px solid #ddd; margin-bottom: 6px; background: #f8f8f8; }
+    ul.results li.pass { border-color: #2ecc71; }
+    ul.results li.fail { border-color: #e74c3c; background: #fff3f3; }
+    .app-container { margin-top: 24px; padding: 12px; border: 1px dashed #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Test Runner - Clima</h1>
+  <div id="test-output">Cargando…</div>
+
+  <div class="app-container">
+    <h2>Fixture de la App</h2>
+    <!-- Reutilizamos el mismo markup que index.html para probar UI -->
+    <form id="search-form" class="card form">
+      <label for="city">Ciudad</label>
+      <div class="row">
+        <input id="city" name="city" type="text" placeholder="Ej. Madrid, Buenos Aires, CDMX" required />
+        <button type="submit">Buscar</button>
+      </div>
+      <small class="hint">Usa el nombre de la ciudad y, si es necesario, el país (ej. Lima, PE).</small>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="result" class="card result" hidden>
+      <h2 id="place"></h2>
+      <p class="temperature">
+        <span id="temp">--</span>
+        <span class="unit">°C</span>
+      </p>
+      <p id="details" class="details"></p>
+    </section>
+  </div>
+
+  <!-- App scripts -->
+  <script src="../assets/js/app.js"></script>
+
+  <!-- Test harness + specs -->
+  <script src="./test-helpers.js"></script>
+  <script src="./app.spec.js"></script>
+</body>
+</html>

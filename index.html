@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicación del Clima</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Clima Actual</h1>
+
+    <form id="search-form" class="card form">
+      <label for="city">Ciudad</label>
+      <div class="row">
+        <input id="city" name="city" type="text" placeholder="Ej. Madrid, Buenos Aires, CDMX" required />
+        <button type="submit">Buscar</button>
+      </div>
+      <small class="hint">
+        Usa el nombre de la ciudad y, si es necesario, el país (ej. Lima, PE).
+      </small>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="result" class="card result" hidden>
+      <h2 id="place"></h2>
+
+      <p class="temperature">
+        <span id="weather-icon" aria-hidden="true">❓</span>
+        <span id="temp">--</span>
+        <span class="unit">°C</span>
+      </p>
+
+      <p id="details" class="details"></p>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>
