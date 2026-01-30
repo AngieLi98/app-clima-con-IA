@@ -79,12 +79,12 @@ Para ejecutarlas:
 ## 📊 Ejemplo de Resultado
 Búsqueda: **"Lima"**
 
-Lugar: Lima, PE
-Temperatura: 24 °C
-Humedad: 55 %
-Viento: 12 km/h
-Precipitación: 0.0 mm
-Actualizado: 2024-05-01T10:00
+- Lugar: Lima, PE
+- Temperatura: 24 °C
+- Humedad: 55 %
+- Viento: 12 km/h
+- Precipitación: 0.0 mm
+- Actualizado: 2024-05-01T10:00
 
 ---
 
